@@ -149,6 +149,11 @@ public class signIn extends javax.swing.JFrame {
         SIGNUP.setText("SIGN UP");
         SIGNUP.setDoubleBuffered(true);
         SIGNUP.setOpaque(true);
+        SIGNUP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SIGNUPMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout loginbgLayout = new javax.swing.GroupLayout(loginbg);
         loginbg.setLayout(loginbgLayout);
@@ -215,6 +220,14 @@ public class signIn extends javax.swing.JFrame {
     private void passSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passSignInActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passSignInActionPerformed
+
+    private void SIGNUPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SIGNUPMouseClicked
+        signUp sn = new signUp();
+        sn.setLocationRelativeTo(null);
+        sn.setVisible(true);
+       
+        this.dispose();
+    }//GEN-LAST:event_SIGNUPMouseClicked
 
     /**
      * @param args the command line arguments
